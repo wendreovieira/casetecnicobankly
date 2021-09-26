@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="7.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transferencia.Domain.Core\Transferencia.Domain.Core.csproj" />
+    <ProjectReference Include="..\Transferencia.Infra.CrossCutting.Http\Transferencia.Infra.CrossCutting.Http.csproj" />
+  </ItemGroup>
+
+</Project>
