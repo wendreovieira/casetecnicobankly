@@ -8,7 +8,8 @@ Olá, segue abaixo uma lista das tecnologias e padrões que fiz uso para desenvo
 - Entity Framework;
 - PostgreSQL;
 - Fluent Validation;
-- Docker.
+- Mock;
+- xUnit.
 
 ## Design Patterns:
 - CQRS;
