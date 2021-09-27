@@ -37,7 +37,7 @@ namespace Transferencia.Infra.Data.Repositories
         {
             using (var client = new HttpClient())
             {
-                var response = client.GetAsync(ApiRoutes.Account.GetByNumber(accountNumber)).Result;
+                var response = await client.GetAsync(ApiRoutes.Account.GetByNumber(accountNumber));
 
                 switch (response.StatusCode)
                 {
