@@ -43,7 +43,7 @@ namespace Transferencia.Domain.Services
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                _ = _mediator.Publish(new TransferNotCompletedEvent(transaction.Id, ex.Message));                
+                _ = _mediator.Publish(new TransferNotCompletedEvent(transaction.Id, ex.Message));
             }
         }
 
@@ -59,7 +59,7 @@ namespace Transferencia.Domain.Services
             catch (Exception ex)
             {
                 _logger.LogError(DefaultMessages.ReverseTransferNotCompleted(ex.Message));
-                throw;
+                _ = _mediator.Publish(new TransferNotCompletedEvent(reverseTransfer.TransactionId, ex.Message));
             }
         }
     }

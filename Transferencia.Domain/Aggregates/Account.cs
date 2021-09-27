@@ -8,7 +8,7 @@ namespace Transferencia.Domain.Aggregates
         public Account(int id, string accountNumber, float balance)
         {
             if (string.IsNullOrWhiteSpace(accountNumber))
-                throw new ArgumentException();
+                throw new ArgumentNullException();
             
             Id = id;
             AccountNumber = accountNumber;
